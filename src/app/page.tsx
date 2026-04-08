@@ -10,13 +10,19 @@ export default function LandingPage() {
     e.preventDefault();
     
     try {
-      const response = await fetch('/api/signup', {
+      // Save email to database
+      await fetch('/api/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
       });
       
-      const data = await response.json();
+      // TODO: Replace with your actual Stripe payment link
+      const stripePaymentLink = 'https://buy.stripe.com/test_REPLACE_WITH_YOUR_LINK';
+      
+      // Open Stripe payment in new tab
+      window.open(stripePaymentLink, '_blank');
+      
       setSubmitted(true);
       
     } catch (error) {
@@ -107,8 +113,9 @@ export default function LandingPage() {
               </form>
             ) : (
               <div className="bg-green-600/20 border border-green-400 rounded-lg p-6">
-                <h4 className="text-xl font-bold text-green-400 mb-2">🎉 You&apos;re In!</h4>
-                <p className="text-gray-200">We&apos;ll contact you within 24 hours with payment details and your first signal summary.</p>
+                <h4 className="text-xl font-bold text-green-400 mb-2">🎉 Payment Link Opened!</h4>
+                <p className="text-gray-200 mb-4">Complete your payment in the new tab to start receiving signals.</p>
+                <p className="text-sm text-gray-400">Didn&apos;t see the payment page? <button onClick={() => window.open('https://buy.stripe.com/test_REPLACE_WITH_YOUR_LINK', '_blank')} className="text-blue-400 hover:underline">Click here</button></p>
               </div>
             )}
             
