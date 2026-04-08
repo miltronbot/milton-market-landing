@@ -8,11 +8,20 @@ export default function LandingPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Add actual Stripe payment integration
-    setSubmitted(true);
     
-    // For now, just alert - we'll replace with Stripe
-    alert(`Thanks! We'll contact ${email} with payment details within 24 hours.`);
+    try {
+      const response = await fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      
+      const data = await response.json();
+      setSubmitted(true);
+      
+    } catch (error) {
+      alert('Error signing up. Please try again.');
+    }
   };
 
   return (
