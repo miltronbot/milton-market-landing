@@ -34,7 +34,7 @@ export default function LandingPage() {
               AI Trading Signals with <span className="text-green-400">70%+ Win Rates</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Get proven market signals powered by Steve&apos;s Hybrid Strategy. 
+              Get proven market signals powered by our proprietary AI algorithm. 
               <br />3,992 backtested signals across stocks, crypto, and ETFs.
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function LandingPage() {
             </div>
             <div>
               <h4 className="text-xl font-bold mb-3">🤖 AI-Powered Analysis</h4>
-              <p className="text-gray-300">Steve&apos;s Hybrid Strategy: MFI + StochRSI + RSI convergence</p>
+              <p className="text-gray-300">Milton&apos;s Hybrid Strategy: MFI + StochRSI + RSI convergence</p>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function LandingPage() {
             </div>
             <div className="text-center">
               <div className="bg-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">2</div>
-              <h4 className="font-bold mb-2">Hybrid Strategy Detection</h4>
+              <h4 className="font-bold mb-2">Milton Algorithm Detection</h4>
               <p className="text-gray-400 text-sm">MFI + StochRSI + RSI must align on same candle for signal</p>
             </div>
             <div className="text-center">
