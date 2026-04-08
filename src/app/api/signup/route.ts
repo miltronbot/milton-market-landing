@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     const newSignup: Signup = {
       email,
       timestamp: new Date().toISOString(),
-      ip: request.ip || request.headers.get('x-forwarded-for') || 'unknown'
+      ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
     };
 
     signups.push(newSignup);
