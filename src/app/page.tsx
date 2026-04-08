@@ -17,8 +17,8 @@ export default function LandingPage() {
         body: JSON.stringify({ email })
       });
       
-      // TODO: Replace with your actual Stripe payment link
-      const stripePaymentLink = 'https://buy.stripe.com/test_REPLACE_WITH_YOUR_LINK';
+      // Stripe test payment link
+      const stripePaymentLink = 'https://buy.stripe.com/test_eVqcN5ek48kL4cn0dpfMA00';
       
       // Open Stripe payment in new tab
       window.open(stripePaymentLink, '_blank');
@@ -115,7 +115,7 @@ export default function LandingPage() {
               <div className="bg-green-600/20 border border-green-400 rounded-lg p-6">
                 <h4 className="text-xl font-bold text-green-400 mb-2">🎉 Payment Link Opened!</h4>
                 <p className="text-gray-200 mb-4">Complete your payment in the new tab to start receiving signals.</p>
-                <p className="text-sm text-gray-400">Didn&apos;t see the payment page? <button onClick={() => window.open('https://buy.stripe.com/test_REPLACE_WITH_YOUR_LINK', '_blank')} className="text-blue-400 hover:underline">Click here</button></p>
+                <p className="text-sm text-gray-400">Didn&apos;t see the payment page? <button onClick={() => window.open('https://buy.stripe.com/test_eVqcN5ek48kL4cn0dpfMA00', '_blank')} className="text-blue-400 hover:underline">Click here</button></p>
               </div>
             )}
             
