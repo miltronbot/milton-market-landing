@@ -114,6 +114,7 @@ export default function LandingPage() {
             
             <p className="text-xs text-gray-300 mt-4">
               * Not financial advice. Past performance doesn&apos;t guarantee future results.
+              <br />By signing up, you agree to our <a href="/terms" className="text-blue-400 hover:underline">Terms of Service</a> and <a href="/privacy" className="text-blue-400 hover:underline">Privacy Policy</a>.
             </p>
           </div>
 
@@ -168,6 +169,11 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto px-6 text-center text-gray-400">
           <p>Milton Market - AI-Powered Trading Signals</p>
           <p className="text-sm mt-2">Built by traders, for traders. 🤖</p>
+          <div className="mt-4 space-x-4 text-xs">
+            <a href="/terms" className="hover:text-gray-200">Terms</a>
+            <a href="/privacy" className="hover:text-gray-200">Privacy</a>
+            <span>hello@miltonmarket.ai</span>
+          </div>
         </div>
       </div>
     </div>
